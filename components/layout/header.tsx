@@ -64,7 +64,6 @@ const Header = () => {
         <CartButton />
 
         <SearchBar />
-       <Link href='/track-order'> <Button size={'sm'}>Track Order</Button></Link>
       </div>
     </header>
   );
