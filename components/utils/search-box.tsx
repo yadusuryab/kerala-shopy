@@ -55,7 +55,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ defaultValue = "", cat = false })
         </SheetTrigger>
         </div>
         {/* Sheet Content with Input */}
-        <SheetContent className="flex flex-col p-4 !w-full">
+        <SheetContent className="flex bg-white flex-col p-4 !w-full">
           <SheetHeader className="text-left">
             <SheetTitle>Search Car Accessories</SheetTitle>
             <SheetDescription>
