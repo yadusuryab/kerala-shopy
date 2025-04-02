@@ -11,6 +11,7 @@ interface CustomerDetailsFormProps {
     district: string;
     state: string;
     pincode: string;
+    landmark:string;
   };
   handleInputChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,7 +35,7 @@ export const CustomerDetailsForm = ({
           required
         />
       </div>
-      <div className="space-y-2">
+      {/* <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input
           id="email"
@@ -45,7 +46,7 @@ export const CustomerDetailsForm = ({
           onChange={handleInputChange}
           required
         />
-      </div>
+      </div> */}
     </div>
     <div className="space-y-2">
       <Label htmlFor="contact1">Contact Number</Label>
@@ -58,6 +59,7 @@ export const CustomerDetailsForm = ({
         required
       />
     </div>
+
     <div className="space-y-2">
       <Label htmlFor="address">Address</Label>
       <Textarea
@@ -70,6 +72,17 @@ export const CustomerDetailsForm = ({
       />
     </div>
     <div className="space-y-2">
+      <Label htmlFor="land">Land Mark</Label>
+      <Input
+        id="contact1"
+        name="contact1"
+        placeholder="Landmark"
+        value={customerDetails.landmark}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+    {/* <div className="space-y-2">
       <Label htmlFor="district">District</Label>
       <Input
         id="district"
@@ -90,7 +103,7 @@ export const CustomerDetailsForm = ({
         onChange={handleInputChange}
         required
       />
-    </div>
+    </div> */}
     <div className="space-y-2">
       <Label htmlFor="pincode">Pincode</Label>
       <Input
