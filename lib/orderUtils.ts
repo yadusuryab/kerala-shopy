@@ -36,7 +36,7 @@ export interface CartItem {
     address: string;
     landmark:string;
   }, cartItems: CartItem[]) => {
-    if (!customerDetails.name || !customerDetails.email || !customerDetails.contact1 || !customerDetails.address|| !customerDetails.landmark) {
+    if (!customerDetails.name || !customerDetails.contact1 || !customerDetails.address|| !customerDetails.landmark) {
       alert("Please fill all the required fields.");
       return false;
     }
