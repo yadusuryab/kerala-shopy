@@ -11,7 +11,7 @@ const defaultData: any = [
   {
     question: "How do I place an order?",
     answer:
-      "Just DM us with the product name and quantity. We'll confirm availability and payment details.",
+      "Just view the product and click on order now. We'll confirm availability and payment details.",
     id: 2,
   },
   {
@@ -28,12 +28,7 @@ const defaultData: any = [
     iconPosition: "left",
     id: 4,
   },
-  {
-    question: "Do you accept returns or exchanges?",
-    answer:
-      "Yes, we accept returns within 7 days if the product is damaged or incorrect. DM us for assistance.",
-    id: 5,
-  },
+ 
   {
     question: "How can I track my order?",
     answer:
@@ -42,11 +37,7 @@ const defaultData: any = [
     iconPosition: "right",
     id: 6,
   },
-  {
-    question: "Do you offer cash on delivery?",
-    answer: "Currently, we only accept prepaid orders.",
-    id: 7,
-  },
+
 ];
 
 function Faq() {
