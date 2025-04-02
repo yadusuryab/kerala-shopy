@@ -104,17 +104,13 @@ export default async function ProductPage({ params }: any) {
 
           {/* Action Buttons */}
           <div>
-            <Link href={`https://wa.me/${site.phone}?text=${encodeURIComponent(message)}`} target="_blank">
-              <Button className="w-full rounded-sm bg-green-500 text-white hover:bg-green-600">
-                <MessageCircle /> Chat via WhatsApp
-              </Button>
-            </Link>
+            
           </div>
 
           <div className="grid grid-cols-2 gap-2">
-            <Link href={`tel:${site.phone}`} target="_blank">
-              <Button className="w-full rounded-sm" variant={"secondary"}>
-                <PhoneCall /> Enquire via Phone
+            <Link href={`https://wa.me/${site.phone}?text=${encodeURIComponent(message)}`} target="_blank">
+              <Button className="w-full rounded-sm bg-black text-white hover:bg-green-600">
+                <MessageCircle /> Order Now
               </Button>
             </Link>
 
