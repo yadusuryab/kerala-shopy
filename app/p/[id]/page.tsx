@@ -129,7 +129,7 @@ export default async function ProductPage({ params }: any) {
 
           <div className="grid grid-cols-2 gap-2">
             <Link
-              href={`https://wa.me/${site.phone}?text=${encodeURIComponent(
+              href={`https://wa.me/+91${site.phone}?text=${encodeURIComponent(
                 message
               )}`}
               target="_blank"
