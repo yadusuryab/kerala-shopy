@@ -48,7 +48,7 @@ import SearchBar from "../utils/search-box";
         {displayedVehicles.map((cat: any) => (
           
             <Link href={`/products?category=${cat.slug.current}`}>
-              <Button onClick={buttonOnclick} className={`h-20 rounded-none text-2xl font-semibold ${buttonClass}`}>
+              <Button onClick={buttonOnclick} className={`h-20 rounded-none text-2xl font-semibold ${buttonClass}`} variant={'ghost'}>
                 {cat.name}
               </Button>
             </Link>

@@ -2,13 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ShoppingBag, CheckCircle } from "lucide-react";
+import { ShoppingBag, CheckCircle, Zap } from "lucide-react";
 import Link from "next/link";
 
 interface AddToCartButtonProps {
   product: {
     _id: string;
-    name: string; // Updated from productName to name
+    name: string;
     category: {
       name: string;
       slug: string;
@@ -20,11 +20,12 @@ interface AddToCartButtonProps {
     images: { asset: { url: string } }[];
     description: string;
     price: number;
-    offerPrice?: number; // Optional offer price
+    offerPrice?: number;
   };
+  variant?: "add-to-cart" | "buy-now";
 }
 
-export default function AddToCartButton({ product }: AddToCartButtonProps) {
+export default function AddToCartButton({ product, variant = "add-to-cart" }: AddToCartButtonProps) {
   const [isInCart, setIsInCart] = useState(false);
 
   useEffect(() => {
@@ -43,15 +44,37 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
     }
   };
 
+  const handleBuyNow = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    
+    // Add to cart if not already there
+    if (!cart.some((item: any) => item._id === product._id)) {
+      const updatedCart = [...cart, product];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+    }
+    
+    // Redirect to checkout
+    window.location.href = "/checkout";
+  };
+
+  if (variant === "buy-now") {
+    return (
+      <Button onClick={handleBuyNow} className="w-full" size={'sm'}>
+        <Zap className="mr-2 h-4 w-4" /> Buy Now On COD
+      </Button>
+    );
+  }
+
   return isInCart ? (
     <Link href="/my-cart">
-      <Button variant="outline" className="w-full " size={'sm'}>
-        <CheckCircle  /> View in Cart
+      <Button variant="outline" className="w-full" size={'sm'}>
+        <CheckCircle className="mr-2 h-4 w-4" /> View in Cart
       </Button>
     </Link>
   ) : (
-    <Button onClick={handleAddToCart} className="w-full " size={'sm'}>
-      <ShoppingBag  /> Add to Cart
+    <Button onClick={handleAddToCart} className="w-full" size={'sm'}>
+      <ShoppingBag className="mr-2 h-4 w-4" /> Add to Cart
     </Button>
   );
 }

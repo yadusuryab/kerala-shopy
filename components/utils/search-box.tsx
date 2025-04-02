@@ -57,15 +57,15 @@ const SearchBar: React.FC<SearchBarProps> = ({ defaultValue = "", cat = false })
         {/* Sheet Content with Input */}
         <SheetContent className="flex bg-white flex-col p-4 !w-full">
           <SheetHeader className="text-left">
-            <SheetTitle>Search Car Accessories</SheetTitle>
+            <SheetTitle>Search Products</SheetTitle>
             <SheetDescription>
-              Enter your search below to find the best for your car.
+              Enter your search below to find the best for you.
             </SheetDescription>
           </SheetHeader>
 
           <div className="flex items-center relative">
             <input
-              placeholder="Search for car accessories..."
+              placeholder="Search for trending products..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={handleKeyDown}
@@ -77,7 +77,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ defaultValue = "", cat = false })
             {/* Button to trigger the search */}
             <div className="absolute right-2">
               <Link href={search ? `/products?search=${search}` : "/products"}>
-                <Button variant={"default"} size={"icon"} onClick={handleSearchClick}>
+                <Button variant={"default"} size={"icon"} onClick={handleSearchClick} className="rounded-full">
                   <Search />
                 </Button>
               </Link>
@@ -90,7 +90,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ defaultValue = "", cat = false })
             className={"!p-0"}
             buttonOnclick={()=>setIsSheetOpen(false)}
             buttonClass={
-              "text-xl bg-background text-foreground p-0 w-full !text-start border-b-2"
+              "p-0 w-full  border-b"
             }
             heading={true}
           />

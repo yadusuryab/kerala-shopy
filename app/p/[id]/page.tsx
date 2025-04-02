@@ -18,7 +18,9 @@ interface ProductProps {
   params: Promise<{ id: string }>;
 }
 
-export async function generateMetadata({ params }: ProductProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ProductProps): Promise<Metadata> {
   const resolvedParams = await params;
   const product = await getShoeById(resolvedParams.id);
 
@@ -50,7 +52,19 @@ export default async function ProductPage({ params }: any) {
 
   if (!product) return notFound();
 
-  const { name, category, material, waterResistance, movementType, caseSize, images, description, price, offerPrice, soldOut } = product;
+  const {
+    name,
+    category,
+    material,
+    waterResistance,
+    movementType,
+    caseSize,
+    images,
+    description,
+    price,
+    offerPrice,
+    soldOut,
+  } = product;
   const message = `Hi, I am interested in the ${name}.
   - Price: ₹${offerPrice ? offerPrice.toLocaleString() : price.toLocaleString()}
   - Category: ${category?.name}
@@ -59,7 +73,9 @@ export default async function ProductPage({ params }: any) {
   - Movement Type: ${movementType}
   - Case Size: ${caseSize}
   
-  Check it out here: ${process.env.NEXT_PUBLIC_BASE_URL}/p/${resolvedParams.id}`;
+  Check it out here: ${process.env.NEXT_PUBLIC_BASE_URL}/p/${
+    resolvedParams.id
+  }`;
 
   return (
     <div className="md:mx-28 mx-4">
@@ -77,8 +93,12 @@ export default async function ProductPage({ params }: any) {
           </div>
 
           <div className="flex gap-4 items-center">
-            <Badge className="rounded-md">{category?.name?.toUpperCase()}</Badge>
-            <Badge className="rounded-md" variant={'secondary'}>Case Size: {caseSize}</Badge>
+            <Badge className="rounded-md">
+              {category?.name?.toUpperCase()}
+            </Badge>
+            <Badge className="rounded-md" variant={"secondary"}>
+              Case Size: {caseSize}
+            </Badge>
           </div>
 
           {/* Price Section */}
@@ -104,19 +124,24 @@ export default async function ProductPage({ params }: any) {
 
           {/* Action Buttons */}
           <div>
-            
+            <AddToCartButton product={product} variant="buy-now" />
           </div>
 
           <div className="grid grid-cols-2 gap-2">
-            <Link href={`https://wa.me/${site.phone}?text=${encodeURIComponent(message)}`} target="_blank">
-              <Button className="w-full rounded-sm bg-black text-white hover:bg-green-600">
-                <MessageCircle /> Order Now
+            <Link
+              href={`https://wa.me/${site.phone}?text=${encodeURIComponent(
+                message
+              )}`}
+              target="_blank"
+            >
+              <Button className="w-full rounded-sm   " variant={'outline'} size={'sm'}>
+                <MessageCircle /> Buy Now
               </Button>
             </Link>
 
             {/* Conditionally render "Sold Out" button or AddToCartButton */}
             {soldOut ? (
-              <Button className="w-full rounded-sm" disabled>
+              <Button className="w-full rounded-sm" disabled size={'sm'}>
                 Sold Out
               </Button>
             ) : (
@@ -127,18 +152,26 @@ export default async function ProductPage({ params }: any) {
           {/* Additional Details */}
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div className="col-span-2">
-              <SHeading title="About This Product" description={description} nolink={true} />
+              <SHeading
+                title="About This Product"
+                description={description}
+                nolink={true}
+              />
             </div>
             <div>
               <p className="font-semibold text-muted-foreground">Material</p>
               <p>{material || "N/A"}</p>
             </div>
             <div>
-              <p className="font-semibold text-muted-foreground">Water Resistance</p>
+              <p className="font-semibold text-muted-foreground">
+                Water Resistance
+              </p>
               <p>{waterResistance || "N/A"}</p>
             </div>
             <div>
-              <p className="font-semibold text-muted-foreground">Movement Type</p>
+              <p className="font-semibold text-muted-foreground">
+                Movement Type
+              </p>
               <p>{movementType || "N/A"}</p>
             </div>
             <div>

@@ -59,8 +59,8 @@ export default function ProductCard2({
   const cardContent = (
     <div
       onClick={noLink ? onClick : undefined}
-      className={`max-w-48 ${className} w-full relative`} // Add relative positioning
-      style={{ cursor: noLink ? "pointer" : "default" }} // Add pointer cursor if noLink is true
+      className={`max-w-52 ${className} p-2 w-full rounded-xl relative bg-secondary`} // Add relative positioning
+      style={{ cursor: "pointer" }} // Add pointer cursor if noLink is true
     >
       {/* Sold Out Badge */}
       {soldOut && (
@@ -70,9 +70,9 @@ export default function ProductCard2({
       )}
 
       {/* Product Image Container */}
-      <div className={`relative aspect-square h-44 ${soldOut ? "grayscale" : ""}`}>
+      <div className={`relative aspect-square h-44  ${soldOut ? "grayscale" : ""}`}>
         <Image
-          className="object-cover"
+          className="object-cover rounded-xl"
           src={images[0]?.asset.url || "/placeholder-image.jpg"}
           alt={name}
           fill // Fill the container
@@ -85,7 +85,7 @@ export default function ProductCard2({
       <div className="font-semibold mt-2 text-sm grid gap-0">
         <h2 className="font-bold mb-0">{name}</h2>
         <p className="text-muted-foreground mt-0">{category.name}</p>
-        <p className="mt-2">PRICE : ₹ {offerPrice || price}</p>
+        <p className="text-lg">₹ {offerPrice || price} {offerPrice && <span className="line-through text-muted-foreground ">₹{price}</span>}</p>
 
         {/* Disable Add to Cart button if sold out */}
         {!soldOut ? (

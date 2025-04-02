@@ -1,8 +1,8 @@
 export const site = {
-    name : 'Kerala Shopy',
+    name : 'Kerala Watches',
     instagram:'keralashopy',
     phone:"8075555020",
     google_map:"",
     email:"KeralaShopy@gmail.com",
-    address:"Kerala Shopy, Kerala",
+    address:"Kerala Watches, Kerala",
 }

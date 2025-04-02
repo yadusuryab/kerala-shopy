@@ -77,11 +77,7 @@ function Footer() {
                         <p>Instagram</p>
                     
                     </Link>
-                    <Link href={`https://www.facebook.com/profile.php?id=61553325001995#`}>
-                     
-                     <p>Facebook</p>
-                 
-                 </Link>
+                   
                  
             </div>
           </div>

@@ -149,20 +149,7 @@ export function Connect() {
                           <IconBrandWhatsapp />
                         </span>
                       </Link>
-                      <Link
-                        href={`https://www.facebook.com/profile.php?id=61553325001995#`}
-                        target="_blank"
-                        className={cn(
-                          buttonVariants({
-                            variant: "secondary",
-                            size: "icon",
-                          })
-                        )}
-                      >
-                        <span className="flex items-center gap-1">
-                          <IconBrandFacebook />
-                        </span>
-                      </Link>
+                   
                       {/* <Link
                         href={site.google_map}
                         target="_blank"
