@@ -61,7 +61,7 @@ export default function AddToCartButton({ product, variant = "add-to-cart" }: Ad
   if (variant === "buy-now") {
     return (
       <Button onClick={handleBuyNow} className="w-full" size={'sm'}>
-        <Zap className="mr-2 h-4 w-4" /> Buy Now On COD
+        <Zap className="mr-2 h-4 w-4" /> Cash On Delivery
       </Button>
     );
   }

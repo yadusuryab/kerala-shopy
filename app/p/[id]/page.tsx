@@ -135,7 +135,7 @@ export default async function ProductPage({ params }: any) {
               target="_blank"
             >
               <Button className="w-full rounded-sm   " variant={'outline'} size={'sm'}>
-                <MessageCircle /> Buy Now
+                <MessageCircle /> Order Now
               </Button>
             </Link>
 
