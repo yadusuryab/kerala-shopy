@@ -95,7 +95,7 @@ function ProductList() {
             <p className="text-center text-lg text-muted-foreground font-bold mt-6">
               Couldn't find what you're looking for? Contact us via WhatsApp.
             </p>
-            <Link href={`https://wa.me/${site.phone}?text=${encodeURIComponent("Hi")}`} target="_blank">
+            <Link href={`https://wa.me/+91${site.phone}?text=${encodeURIComponent("Hi")}`} target="_blank">
               <div className="flex justify-center">
                 <Button className="mx-auto bg-green-500 text-white hover:bg-green-600">
                   Chat via WhatsApp

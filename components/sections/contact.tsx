@@ -112,7 +112,7 @@ export function Connect() {
                         </span>
                       </Link>
                       <Link
-                        href={`https://wa.me/${site.phone}`}
+                        href={`https://wa.me/+91${site.phone}`}
                         target="_blank"
                         className={cn(
                           buttonVariants({

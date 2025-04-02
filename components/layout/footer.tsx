@@ -66,7 +66,7 @@ function Footer() {
             <h3 className="mb-2 font-semibold">Social</h3>
             <div className=" grid text-muted-foreground">
              
-                    <Link href={`https://wa.me/${site.phone}?text=Hi`}>
+                    <Link href={`https://wa.me/+91${site.phone}?text=Hi`}>
                      
                         <p>Whatsapp</p>
                      
