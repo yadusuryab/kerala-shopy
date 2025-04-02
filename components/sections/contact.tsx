@@ -76,31 +76,7 @@ export function Connect() {
                     ref={scope}
                   >
                     <Brand className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2" />
-                    <div
-                      id="next-js"
-                      className="absolute bottom-12 left-14 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
-                    >
-                      Style
-                    </div>
-                    <div
-                      id="react-js"
-                      className="absolute left-2 top-20 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
-                    >
-                      Affordablity
-                    </div>
-                    <div
-                      id="typescript"
-                      className="absolute bottom-20 right-1 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
-                    >
-                      {site.name}
-                    </div>
-                    <div
-                      id="javascript"
-                      className="absolute right-12 top-10 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
-                    >
-                      Quality
-                    </div>
-
+                
                  
                   </div>
 
