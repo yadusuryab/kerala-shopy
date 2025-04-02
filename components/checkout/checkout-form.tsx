@@ -74,8 +74,8 @@ export const CustomerDetailsForm = ({
     <div className="space-y-2">
       <Label htmlFor="land">Land Mark</Label>
       <Input
-        id="contact1"
-        name="contact1"
+        id="landmark"
+        name="landmark"
         placeholder="Landmark"
         value={customerDetails.landmark}
         onChange={handleInputChange}

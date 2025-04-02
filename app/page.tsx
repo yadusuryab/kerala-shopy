@@ -33,7 +33,7 @@ export default function Home() {
           {/* <ProductHomeList/> */}
           <ProductHomeGrid />
           <Connect />
-          <Faq />
+          {/* <Faq /> */}
           {/* <FeaturesSection />
           <Faq />
           <Connect /> */}
