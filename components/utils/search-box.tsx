@@ -54,8 +54,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ defaultValue = "", cat = false })
                 md:w-20 md:h-20  /* Equal width and height for medium screens */
                 rounded-full 
                 flex flex-col 
-                items-center 
-                justify-center 
+                
                 p-2 
                 text-center 
                 break-words `} variant={'outline'}>
