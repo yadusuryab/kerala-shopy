@@ -54,17 +54,16 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex top-0 justify-between z-50 w-full  md:px-16  bg-background h-14 items-center px-4">
-      <div>
+    <header className="flex top-0 border-b justify-between z-50 w-full  md:px-16  bg-background h-14 items-center px-4">
+        <CartButton />
         <Link href="/">
           <Brand />
         </Link>
-      </div>
-      <div className="flex md:gap-3 gap-1">
-        <CartButton />
+     
+     
 
         <SearchBar />
-      </div>
+    
     </header>
   );
 };

@@ -107,7 +107,7 @@ export default function ProductCard({
         <div className="flex items-center gap-1 my-1">
           <Badge variant="secondary">
             <span className="font-bold text-primary uppercase">
-              {category.name} &nbsp;
+              {category.name} &nbsp; dslfkld
             </span>
           </Badge>
 

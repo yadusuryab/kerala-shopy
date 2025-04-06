@@ -19,7 +19,7 @@ const Brand: React.FC<BrandProps> = ({ small = false, className = "" }) => {
         className={`object-contain ${small ? "max-w-16" : "max-w-28"}`}
         priority
       /> */}
-      <h2 className="">KERALA <span className="font-bold">WATCHES</span></h2>
+      <h2 className="font-bold text-xl">KERALA WATCHES</h2>
     </div>
   );
 };

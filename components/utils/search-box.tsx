@@ -49,7 +49,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ defaultValue = "", cat = false })
         <SheetTrigger asChild>
          {!cat ? <Button variant="ghost" size={"icon"}>
             <Search />
-          </Button> :  <Button  className={`h-20  rounded-2xl flex justify-between w-full   border text-xl font-semibold  `} variant={'outline'}>
+          </Button> :  <Button  className={`h-36  rounded-full flex justify-between w-full   border-2 text-lg font-semibold  `} variant={'outline'}>
                 <span>All Categories</span> <span><BlocksIcon/></span>
               </Button>}
         </SheetTrigger>

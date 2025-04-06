@@ -56,10 +56,10 @@ function CategoryGrid({
   return (
     <div className={`p-4 ${className}`}>
       {!heading && (
-        <h2 className="mb-3 text-xl font-bold ">Our Collections</h2>
+        <h2 className="mb-3 text-xl font-medium ">Our Collections</h2>
       )}
       <div
-        className={`grid  grid-cols-1 md:flex place-items-center w-full  gap-3`}
+        className={`grid  grid-cols-2 md:flex place-items-center w-full  gap-3`}
       >
         {displayedCategories.slice(0,3).map((cat: any) => (
           <Link
@@ -70,7 +70,7 @@ function CategoryGrid({
             <Button
               onClick={buttonOnclick}
               variant={"secondary"}
-              className={`h-20 border rounded-2xl max-w-[400px] flex justify-between w-full text-xl font-semibold ${buttonClass}`}
+              className={`h-36 md:h-20 border-2 rounded-full max-w-[400px] flex justify-between w-full text-lg font-semibold ${buttonClass}`}
             >
               <span className="truncate">{cat.name}</span>{" "}
               <span>
