@@ -3,11 +3,8 @@ import { useState, useEffect } from "react";
 import CategoriesHomeList from "@/components/categories/categories-home-list";
 import CategoryGrid from "@/components/categories/category-grid";
 import ProductHomeGrid from "@/components/product/product-home-grid";
-import ProductHomeList from "@/components/product/product-home-list";
 import { Connect } from "@/components/sections/contact";
 import { Faq } from "@/components/sections/faq";
-import { FeaturesSection } from "@/components/sections/features";
-import { Hero } from "@/components/sections/hero";
 import Splash from "@/components/utils/splash";
 
 export default function Home() {
