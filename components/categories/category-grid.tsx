@@ -56,24 +56,34 @@ function CategoryGrid({
   return (
     <div className={`p-4 ${className}`}>
       {!heading && (
-        <h2 className="mb-3 text-xl font-medium ">Our Collections</h2>
+        <h2 className="mb-3 text-xl font-medium">Our Collections</h2>
       )}
-      <div
-        className={`grid grid-cols-2 md:flex place-items-center w-full gap-3`}
-      >
+      <div className={`grid grid-cols-2 md:flex items-center justify-center w-full gap-3`}>
         {displayedCategories.slice(0,3).map((cat: any) => (
           <Link
             href={`/products?category=${cat.slug.current}`}
-            className="w-full flex justify-center"
+            className="flex justify-center"
             key={cat.slug.current}
           >
             <Button
               onClick={buttonOnclick}
               variant={"secondary"}
-              className={`aspect-square h-36 md:h-20 border-2 rounded-full flex flex-col items-center justify-center gap-2 p-2 w-full max-w-[400px] text-lg font-semibold ${buttonClass}`}
+              className={`
+                aspect-square 
+                w-36 h-36  /* Equal width and height */
+                md:w-20 md:h-20  /* Equal width and height for medium screens */
+                rounded-full 
+                flex flex-col 
+                items-center 
+                justify-center 
+                p-2 
+                text-center 
+                break-words 
+                ${buttonClass}
+              `}
             >
-              <span className="text-center break-words">{cat.name}</span>
-              <ArrowRightCircle className="shrink-0" />
+              <span className="text-sm md:text-xs">{cat.name}</span>
+              <ArrowRightCircle className="w-4 h-4 mt-1" />
             </Button>
           </Link>
         ))}
