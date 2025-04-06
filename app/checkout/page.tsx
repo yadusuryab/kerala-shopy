@@ -103,6 +103,19 @@ export default function CheckoutPage() {
         nolink
       />
       <div className="mt-4 space-y-4">
+      <Card>
+          <CardHeader>
+            <CardTitle className="text-lg font-medium">Order Summary</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <OrderSummary
+              cartItems={cartItems}
+              shippingCharge={shippingCharge}
+              subtotal={subtotal}
+              totalAmount={totalAmount}
+            />
+          </CardContent>
+        </Card>
         <Card>
           <CardHeader>
             <CardTitle>Customer Details</CardTitle>
@@ -115,24 +128,10 @@ export default function CheckoutPage() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Order Summary</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <OrderSummary
-              cartItems={cartItems}
-              shippingCharge={shippingCharge}
-              subtotal={subtotal}
-              totalAmount={totalAmount}
-            />
-          </CardContent>
-        </Card>
+      
 
         <Card>
-          <CardHeader>
-            <CardTitle>Payment Method</CardTitle>
-          </CardHeader>
+        
           <CardContent>
             <PaymentMethod
               paymentMethod={paymentMethod}

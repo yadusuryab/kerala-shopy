@@ -22,7 +22,7 @@ export const PaymentMethod = ({
   isLoading,
 }: PaymentMethodProps) => (
   <div className="space-y-4">
-    <Select onValueChange={handlePaymentChange} value={paymentMethod}>
+    {/* <Select onValueChange={handlePaymentChange} value={paymentMethod}>
       <SelectTrigger>
         <SelectValue placeholder="Select payment method" />
       </SelectTrigger>
@@ -30,7 +30,7 @@ export const PaymentMethod = ({
         <SelectItem value="online">Online Payment</SelectItem>
         <SelectItem value="cod">Cash on Delivery</SelectItem>
       </SelectContent>
-    </Select>
+    </Select> */}
     {/* <div>
       <p>By placing order you agree to our <Link href="/T&C" className="underline">Terms & Conditions.</Link></p>
     </div> */}
