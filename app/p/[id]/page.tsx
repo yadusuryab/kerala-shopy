@@ -152,11 +152,7 @@ export default async function ProductPage({ params }: any) {
           {/* Additional Details */}
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div className="col-span-2">
-              <SHeading
-                title="About This Product"
-                description={description}
-                nolink={true}
-              />
+             
               {description && <>
               <h2 className="font-medium text-md">Description</h2> 
               <p>{description}</p></>}
