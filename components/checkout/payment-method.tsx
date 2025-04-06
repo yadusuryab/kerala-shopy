@@ -31,9 +31,9 @@ export const PaymentMethod = ({
         <SelectItem value="cod">Cash on Delivery</SelectItem>
       </SelectContent>
     </Select>
-    <div>
+    {/* <div>
       <p>By placing order you agree to our <Link href="/T&C" className="underline">Terms & Conditions.</Link></p>
-    </div>
+    </div> */}
     <Button className="w-full" onClick={handleCheckout} disabled={isLoading}>
       {isLoading ? "Processing..." : "Place Order"}
     </Button>
