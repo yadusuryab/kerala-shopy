@@ -157,42 +157,11 @@ export default async function ProductPage({ params }: any) {
                 description={description}
                 nolink={true}
               />
+              {description && <>
+              <h2 className="font-medium text-md">Description</h2> 
+              <p>{description}</p></>}
             </div>
-            <div>
-              <p className="font-semibold text-muted-foreground">Material</p>
-              <p>{material || "N/A"}</p>
-            </div>
-            <div>
-              <p className="font-semibold text-muted-foreground">
-                Water Resistance
-              </p>
-              <p>{waterResistance || "N/A"}</p>
-            </div>
-            <div>
-              <p className="font-semibold text-muted-foreground">
-                Movement Type
-              </p>
-              <p>{movementType || "N/A"}</p>
-            </div>
-            <div>
-              <p className="font-semibold text-muted-foreground">Case Size</p>
-              <p>{caseSize || "N/A"}</p>
-            </div>
-            <div>
-              <p className="font-semibold text-muted-foreground">Price</p>
-              <p>
-                {offerPrice ? (
-                  <>
-                    ₹{new Intl.NumberFormat("en-IN").format(offerPrice)}{" "}
-                    <span className="text-muted-foreground line-through">
-                      ₹{new Intl.NumberFormat("en-IN").format(price)}
-                    </span>
-                  </>
-                ) : (
-                  `₹${new Intl.NumberFormat("en-IN").format(price)}`
-                )}
-              </p>
-            </div>
+         
           </div>
         </div>
       </div>
